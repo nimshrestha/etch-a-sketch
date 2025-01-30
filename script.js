@@ -27,7 +27,8 @@ btn.addEventListener('click', () => {
                 const sqrHeight = contHeight/sqrsPerSide;
                 sqr.style.width = `${sqrWidth}px`;
                 sqr.style.height = `${sqrHeight}px`;
-                sqr.style.border = 'solid 1px black';
+                sqr.style.border = 'solid 1px';
+                sqr.style.borderColor = 'rgb(0,0,0,0.2)';
                 sqr.style.backgroundColor = 'white';
                 // No border if total squares is 1
                 if(totalSqrs == 1){
