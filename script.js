@@ -25,6 +25,9 @@ btn.addEventListener('click', () => {
                 sqr.style.width = `${sqrWidth}px`;
                 sqr.style.height = `${sqrHeight}px`;
                 sqr.style.border = 'solid 1px black';
+                if(totalSqrs == 1){
+                    sqr.style.border = 'none';
+                }
                 container.appendChild(sqr);
                 // check sqr width and height
                 if(i == totalSqrs-1) {
