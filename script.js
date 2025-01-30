@@ -1,6 +1,6 @@
 const container = document.querySelector('.gameContainer');
 const startBtn = document.querySelector('#startBtn');
-
+const resetBtn = document.querySelector('#resetBtn');
 const style = getComputedStyle(container);
 
 // slice() to remove 'px' from string returned to prevent NaN in calculations
@@ -17,8 +17,9 @@ startBtn.addEventListener('click', () => {
     const totalSqrs = sqrsPerSide*sqrsPerSide;
     console.log(`Total Squares: ${totalSqrs}`);
     if (sqrsPerSide > 0 && sqrsPerSide <= 100){
-        for (i=0;i<totalSqrs;++i){
+        for (let i=0;i<totalSqrs;++i){
             const sqr = document.createElement('div');
+            sqr.classList.add('sqrs');
             const sqrWidth = contWidth/sqrsPerSide;
             const sqrHeight = contHeight/sqrsPerSide;
             sqr.style.width = `${sqrWidth}px`;
@@ -35,6 +36,13 @@ startBtn.addEventListener('click', () => {
     }
     else if (sqrsPerSide == null){}
     else alert('Invalid input');
+})
+
+resetBtn.addEventListener('click', () => {
+    const sqrs = document.querySelectorAll('.sqrs');
+    sqrs.forEach((sqr)=>{
+        sqr.remove();
+    });
 })
             
             
