@@ -11,11 +11,12 @@ console.log(`Container height: ${contHeight}`);
 
 
 startBtn.addEventListener('click', () => {
-    const sqrsPerSide = +prompt('Total squares per side in grid? (Limit: 1 to 100)', 16);
+    const sqrsPerSide = prompt('Total squares per side in grid? (Limit: 1 to 100)', 16);
+    console.log(typeof(sqrsPerSide));
     console.log(`Squares per side: ${sqrsPerSide}`);
     const totalSqrs = sqrsPerSide*sqrsPerSide;
     console.log(`Total Squares: ${totalSqrs}`);
-    if (sqrsPerSide){
+    if (sqrsPerSide > 0 && sqrsPerSide <= 100){
         for (i=0;i<totalSqrs;++i){
             const sqr = document.createElement('div');
             const sqrWidth = contWidth/sqrsPerSide;
@@ -32,6 +33,8 @@ startBtn.addEventListener('click', () => {
         }
         
     }
+    else if (sqrsPerSide == null){}
+    else alert('Invalid input');
 })
             
             
