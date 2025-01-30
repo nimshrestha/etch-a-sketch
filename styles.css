@@ -12,9 +12,17 @@ body {
     width: 480px;
     height: 480px;
     margin: 0 auto;
-    margin-top: 25vh;
+    margin-top: 15vh;
     box-sizing: content-box;
     display: flex;
     flex-wrap: wrap;
     
+}
+
+#startBtn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5vh;
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
 }
