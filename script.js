@@ -53,8 +53,7 @@ btn.addEventListener('click', () => {
         const decision = confirm('Are you sure you want to reset?');
         if(decision){
             console.log(`reset`);
-            const sqrs = document.querySelectorAll('.sqr');
-            sqrs.forEach((sqr)=>sqr.remove());
+            container.innerHTML = '';
             btn.textContent = 'Start Sketching';
             let clickEvent = new Event('click');
             btn.dispatchEvent(clickEvent);
